@@ -1,0 +1,32 @@
+int led = 12;
+int led1= 13;
+int led2= 8; 
+
+void setup() {
+
+  pinMode(led, OUTPUT);
+  pinMode(led1, OUTPUT);
+  pinMode(led2, OUTPUT);
+  Serial.begin(115200);
+}
+
+void loop() {
+  digitalWrite(led, HIGH);   
+  delay (0);
+  Serial.println("Hello Here");
+  delay(500);              
+  digitalWrite(led, LOW);    
+  delay(10000);              
+  digitalWrite(led1, HIGH);   
+  delay (3000);
+  Serial.println("Hello Here");
+  delay(500);               
+  digitalWrite(led1, LOW);    
+  delay(15000);   
+   digitalWrite(led2, HIGH);   
+   delay (3000);
+  Serial.println("Hello Here");
+  delay(500);               
+  digitalWrite(led2, LOW);   
+  delay(20000);
+}
