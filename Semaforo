@@ -1,0 +1,25 @@
+# define verde    12   
+# define amarillo 13
+# define rojo     8
+void setup() {
+  pinMode (verde,   OUTPUT); 
+  pinMode (amarillo,OUTPUT);
+  pinMode (rojo,    OUTPUT);
+}
+
+void loop() {
+     //::::::::::: ROJO::::::::::
+  digitalWrite(rojo,    true);
+  delay       (5000);
+     digitalWrite(rojo,    false);
+   
+     //::::::::::: AMARILLO::::::::::
+  digitalWrite(amarillo,true);
+  delay       (5000);
+      digitalWrite(amarillo,false);
+      
+    //::::::::::: VERDE::::::::::      
+    digitalWrite(verde,   true);
+  delay       (5000);
+    digitalWrite(verde,   false);   
+}
