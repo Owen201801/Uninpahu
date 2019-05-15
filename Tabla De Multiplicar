@@ -1,0 +1,23 @@
+int a=0;
+
+void setup() {
+  Serial.begin(9600);
+  Serial.println("Tabla del 10");
+
+  
+}
+
+void loop() {
+  
+  if (a<=100)
+Serial.println(a);
+a=a+10;
+delay (500);
+{
+    
+}
+    
+if (a==100)
+    a=0;
+}
+
