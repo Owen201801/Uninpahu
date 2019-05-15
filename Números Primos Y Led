@@ -1,39 +1,51 @@
-int a=1;
-int r;
-
-void setup() 
-{
-  Serial.begin(9600);
+int a,b,c,d,n,g,e,p,r,f,h;
+int LED1=3;
+void setup () {
+a=0;
+c=0;
+b=0;
+n=0;
+d=0;
+h=0;
+pinMode (LED1,OUTPUT);
+digitalWrite (LED1, LOW);
+Serial.begin(9600);
+}
+void loop () {
+for (a=1; a<=1000; a++){
+  n=n+1;
+  c=0;
+  h=h+1;
+  int r=capicua (h);
+  if (n!=1){
+  for (b=1; b<=n; b++){
+    d=n%b;
+    if (d==0){
+      c=c+1;  
+  }       
+    }      
+    if (c<=2){
+  Serial.print(n);
+  Serial.print (" ");
+  Serial.println(r);
+  delay (1000);
+  if (n==r){
+    digitalWrite (LED1, HIGH);
+    delay (50);
+    digitalWrite (LED1,LOW);
+  }  
+      
+    }
+   }
+  }
 }
 
-void loop() 
-{
-  r = capicua (a);
-  if (r==a)
-  {
-    Serial.print(a);
-    Serial.print(" ");
-    Serial.println(r);
-  }
-
-  a= a+1;
-
-  if (a==100)
-  a=1;
-  delay (300);
-  
-}
-
-int capicua(int n)
-{
-
-  int  p = 0;
-  while (n!=0)
-  {
-   r = n%10;
-   p=(p*10)+r;
-   n=n/10;
-  }
+  int capicua (int f){
+    int p=0;
+    while (f!=0){
+      r=f%10;
+      p=(p*10)+r;
+      f=f/10;
+    }
   return p;
-}
- 
+  }
