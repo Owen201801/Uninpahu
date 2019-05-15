@@ -1,0 +1,39 @@
+int a=1;
+int r;
+
+void setup() 
+{
+  Serial.begin(9600);
+}
+
+void loop() 
+{
+  r = capicua (a);
+  if (r==a)
+  {
+    Serial.print(a);
+    Serial.print(" ");
+    Serial.println(r);
+  }
+
+  a= a+1;
+
+  if (a==100)
+  a=1;
+  delay (300);
+  
+}
+
+int capicua(int n)
+{
+
+  int  p = 0;
+  while (n!=0)
+  {
+   r = n%10;
+   p=(p*10)+r;
+   n=n/10;
+  }
+  return p;
+}
+ 
