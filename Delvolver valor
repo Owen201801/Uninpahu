@@ -1,0 +1,26 @@
+int a=0;
+
+void setup() 
+{
+  Serial.begin(9600);
+  Serial.println("Tabla del 10");
+}
+
+void loop() 
+{
+  Serial.println(a);
+  a=a+10;
+  delay (500);
+  int r = devolver (a);
+  Serial.println(r);
+  if (a==100)
+    a=0;
+}
+
+
+int devolver  (int n)
+{
+
+  n = n * 100;
+  return n;
+}
