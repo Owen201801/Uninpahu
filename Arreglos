@@ -1,0 +1,54 @@
+int n[ 5 ];
+int k=1;
+int sum;
+void setup () {
+  Serial.begin(9600);
+  }
+
+void loop () {
+  Serial.println();
+  sum=0;
+  capturar();
+  delay(600);
+  Serial.println();
+  imprimir(n,5);
+  Serial.print(sum);
+  delay(600);
+  invertir (n,5);
+  Serial.println (" ");
+  Serial.println ("Invertir");
+  imprimir(n,5);
+}
+
+  void imprimir (int x[],int tam)
+ {
+   for ( int j = 0; j < 5; ++j ){
+     Serial.print (x[j]) ;
+      Serial.print ("  ") ;
+   } 
+ }
+
+  void capturar ()
+  {
+     for ( int i = 0; i < 5; ++i ) {
+      n[ i ]= k* 10; 
+      Serial.print (i);
+      Serial.print ("  ");
+      sum= sum+n[i];
+      k++;
+   }
+  }
+
+  void invertir(int z[],int t){
+    int i,aux;
+    i=0;
+    t=t-1;
+    while (i<t)
+    {
+      aux=z[i];
+      z[i]=z[t];
+      z[t]=aux;
+      i++;
+      t--;
+    }   
+  }
