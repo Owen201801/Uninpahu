@@ -1,0 +1,23 @@
+package objects;
+
+import java.util.Scanner;
+
+public class Objects {
+
+   
+    public static void main(String[] args) {
+        
+        Scanner scanner = new Scanner (System.in);
+        Usuario user1= new Usuario();
+        System.out.println("La cedula del primer usuario es: "
+            + user1.Get_iD_Number());
+        user1.Set_iD_Number(1032463378);
+        System.out.println("La cedula del primer usuario es :"
+            + user1.Get_iD_Number());
+        
+        
+        System.out.println(Usuario.ClassMethod()
+        + " " + Usuario.classVerssion);
+    }
+    
+}
