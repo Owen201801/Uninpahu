@@ -1,0 +1,41 @@
+
+package objects;
+
+
+public class Usuario {
+    
+    public static int classVerssion = 1;
+   
+    
+    int iD_Number;
+    float cash_Avalible;
+    String name;
+    int password;
+     
+    public static String ClassMethod() {
+        return "Metodo de clase";
+    }
+    
+    public Usuario(){
+    this.iD_Number = 0;
+}
+    public Usuario(int iD_Number, float cash_Avalible,String name, int password){
+        
+        this.iD_Number = iD_Number;
+        this.cash_Avalible = cash_Avalible;
+        this.name= name;
+        this.password = password;
+    }
+    public int Get_iD_Number(){
+        return iD_Number;
+        
+    }
+    public int Set_iD_Number(){
+        return iD_Number;
+    }
+
+    public void Set_iD_Number(int number) {
+        this.iD_Number = number;
+    }
+}
+
